@@ -1,0 +1,27 @@
+#define PARA_H
+const int OMEGA_DEPTH = 9;
+const int OMEGA_SWITCH_NUM = 256;
+const int CORE_NUM = 512;
+const int FIFO_SIZE = 16;
+const int MAX_TASK_NUM = FIFO_SIZE * 2 / 2;
+const int OM_FIFO_SIZE = 4;
+
+const int MAX_VERTEX_NUM = 1024 * 1024;
+const int MAX_EDGE_NUM = 100000000;
+const int CACHELINE_LEN = 16;
+const int POWER_LAW_V_NUM = 32;
+
+const int BitMap_Compressed_Length = 32;
+const int BitMap_Compressed_NUM = 64; // = VERTEX_NUM / (CORE_NUM * BitMap_Compressed_Length)
+
+const int PSEUDO_CHANNEL_NUM = 32;
+const int GROUP_CORE_NUM = CORE_NUM / PSEUDO_CHANNEL_NUM;
+const int MAX_EDGE_ADDR = MAX_VERTEX_NUM * 32 / PSEUDO_CHANNEL_NUM;
+
+
+const int VERTEX_NOT_READ[POWER_LAW_V_NUM] = {
+    798169, 802022, 859188, 737253, 236717, 800651, 884620, 1038374, 246686, 72581,
+    514920, 939780, 433575, 644849, 887126, 817258, 812863, 802479, 701232, 798386,
+    1030895, 609384, 504066, 426492, 16463, 644226, 506990, 1045487, 628265, 735673,
+    507966, 584249
+};
